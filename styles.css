@@ -537,3 +537,116 @@ body {
   .texto-dedicatoria { font-size: .94rem; }
   .texto-dedicatoria strong { font-size: 1rem; }
 }
+
+/* Nueve vidas, infinitas huellas. */
+:root { scroll-behavior: smooth; --oro-suave: #f0dca8; }
+body { background: radial-gradient(ellipse at 75% 22%, #532e6233, transparent 32%), radial-gradient(ellipse at 10% 60%, #8c421a1f, transparent 35%), #110b1d; }
+.navegacion { position: relative; z-index: 5; width: min(1160px, calc(100% - 3rem)); margin: 0 auto; min-height: 76px; display: flex; align-items: center; gap: 2rem; font-size: .78rem; border-bottom: 1px solid #ebc77825; }
+.navegacion a { color: #decde3; text-decoration: none; }
+.navegacion .marca { margin-right: auto; font: 2rem Georgia,serif; color: var(--oro); }
+.marca span { font-size: 1rem; }
+.navegacion button { border: 1px solid #ebc77855; background: transparent; color: var(--oro-suave); padding: .65rem 1rem; border-radius: 30px; font: inherit; cursor: pointer; }
+.navegacion a:hover { color: var(--oro); }
+.papel-picado { padding-top: 0; height: 68px; opacity: .5; }
+.papel-picado::before { inset-block-start: 0; }
+.bandera { width: 48px; }
+.ofrenda { padding-top: 3rem; }
+.ofrenda > .etiqueta { margin-bottom: 1.5rem; }
+.sobretitulo { color: #bba6c5; font-size: .72rem; letter-spacing: .23em; text-transform: uppercase; margin: 0 0 .5rem; }
+.titulo { font-size: clamp(5rem, 12vw, 9rem); color: #f4cc83; text-shadow: 0 4px 0 #783e2633; letter-spacing: -.055em; }
+.titulo-estrella { font-family: Georgia,serif; display: inline-block; font-size: .45em; vertical-align: middle; color: #ed9c4b; animation: brillar 5s ease-in-out infinite; }
+.subtitulo { font-family: Georgia,serif; font-size: clamp(1.25rem, 3vw, 1.6rem); line-height: 1.5; color: #dfcee4; }
+.altar { margin-top: 3rem; }
+.dedicatoria { border-radius: 3px 32px; background: linear-gradient(135deg,#f6d39307,transparent); }
+.pista { font-family: Georgia,serif; font-size: 1.6rem; line-height: 1.4; }
+.pista span { font-family: var(--fuente-texto); line-height: 1.8; font-size: .8rem; }
+.texto-dedicatoria { line-height: 1.9; }
+.centro { position: relative; }
+.retrato { width: clamp(190px, 42vw, 280px); aspect-ratio: 4 / 5; object-position: 50% 36%; border-radius: 120px 120px 6px 6px; rotate: -3deg; }
+.sello { position: absolute; z-index: 4; left: 0; bottom: 30px; display: grid; place-content: center; width: 72px; height: 72px; border-radius: 50%; background: #ddb369; color: #302032; outline: 1px dashed #593332; outline-offset: -6px; font-size: .58rem; letter-spacing: .12em; line-height: 1.6; rotate: -12deg; box-shadow: 0 6px 22px #0005; }
+.ritual { margin: 2.5rem 0 -1rem; color: #bd9e77; font-size: .65rem; letter-spacing: .14em; text-transform: uppercase; }
+.nota-ritual,.nota-local { color: #aa93b4; font-size: .75rem; }
+.camino { margin: 3.5rem 0; color: var(--oro); opacity: .65; letter-spacing: 1rem; font-size: 1rem; transform: rotate(-7deg); }
+.camino span { font-size: .6rem; }
+.seccion { width: min(1080px,100%); scroll-margin-top: 2rem; }
+.encabezado-seccion h2 { font: 400 clamp(2.8rem,6vw,4.8rem)/1.08 Georgia,serif; letter-spacing: -.045em; margin: 1rem 0; color: #f7ead8; }
+.encabezado-seccion h2 em { color: #f2bb70; font-weight: 400; }
+.encabezado-seccion > p:last-child { color: #b9a4c4; font-size: .9rem; line-height: 1.85; }
+.galeria { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 1rem; margin: 3rem 0 6rem; }
+.foto-tarjeta { padding: .55rem; background: #eee0c7; border: 0; border-radius: 2px; color: #352335; text-align: left; cursor: pointer; rotate: var(--giro,-2deg); transition: transform .25s,box-shadow .25s; font-family: var(--fuente-texto); min-width: 0; box-shadow: 0 15px 25px #0004; }
+.foto-tarjeta:nth-child(2) { --giro: 3deg; margin-top: 1.5rem; }
+.foto-tarjeta:nth-child(3) { --giro: -3deg; }
+.foto-tarjeta:nth-child(4) { --giro: 2deg; margin-top: 1.5rem; }
+.foto-tarjeta:hover { transform: translateY(-10px) rotate(calc(var(--giro,-2deg) * -1)); box-shadow: 0 25px 45px #0008; }
+.foto-tarjeta img { display: block; width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 38%; }
+.foto-tarjeta:nth-child(2) img { object-position: 50% 53%; }
+.foto-tarjeta:nth-child(3) img { object-position: 50% 36%; }
+.foto-tarjeta span { display: block; padding: 1rem .3rem .7rem; font-size: .8rem; line-height: 1.6; }
+.foto-tarjeta small { display: block; font-size: .55rem; letter-spacing: .14em; color: #765663; margin-bottom: .35rem; }
+.constelacion { padding: 3rem 2rem; border: 1px solid #ebc77825; border-radius: 200px 200px 12px 12px; background: radial-gradient(ellipse at center,#713d791f,transparent 65%); }
+.mapa-estelar { max-width: 600px; margin: 1rem auto 2rem; position: relative; }
+.gato-estelar { width: 100%; overflow: visible; }
+.trazo-gato { fill: none; stroke: #ebc77818; stroke-width: 1; stroke-dasharray: 5 7; transition: stroke 1s; }
+.cara-gato { fill: none; stroke: var(--oro); stroke-width: 2; stroke-linecap: round; opacity: 0; transition: opacity 1.5s; }
+.estrella-gato { fill: #65516f; transition: fill .5s,filter .5s; }
+.estrella-gato.activa { fill: #ffe3a0; filter: drop-shadow(0 0 7px #ffc364); }
+.completa .trazo-gato { stroke: #ebc778aa; stroke-dasharray: none; }
+.completa .cara-gato { opacity: 1; }
+.nombre-estelar { display: block; font-size: .65rem; letter-spacing: .2em; color: #baa1c8; }
+.acciones-ritual { display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.acciones-ritual .boton { margin-top: 0; }
+.boton-secundario { background: transparent; border: 0; padding: .8rem; font: .78rem var(--fuente-texto); color: #c4adcd; text-decoration: underline; text-underline-offset: 5px; cursor: pointer; }
+.estado-flores { font-size: .9rem; color: var(--oro-suave); min-height: 3rem; margin-bottom: 0; }
+.nota-local { font-size: .65rem; margin-top: 0; }
+.despedida { font: clamp(2rem,5vw,3.8rem)/1.25 Georgia,serif; margin: 6rem 0 2rem; color: #e5d6e6; letter-spacing: -.03em; }
+.despedida em { color: var(--oro); }
+.despedida span { display: block; margin-top: 1.5rem; font: .8rem var(--fuente-texto); letter-spacing: .1em; color: #bba1c6; }
+.credito-nube { display: block; margin-top: .5rem; font-size: .62rem; letter-spacing: .08em; }
+.cielo,.petalos { position: fixed; inset: 0; overflow: hidden; pointer-events: none; }
+.cielo { z-index: -1; }
+.estrella { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: #f3d8aa; opacity: .3; animation: brillar var(--duracion,5s) ease-in-out infinite alternate; }
+.petalo { position: absolute; left: 50%; top: 65%; width: 10px; height: 17px; border-radius: 80% 10% 80% 10%; background: var(--color,#f9a83b); animation: volar 2.8s ease-out forwards; }
+.petalos { z-index: 8; }
+@keyframes volar { from { opacity: 0; transform: translate(0,50px) rotate(0); } 15% { opacity: 1; } to { opacity: 0; transform: translate(var(--x),var(--y)) rotate(var(--r)); } }
+@keyframes brillar { 0%,100% { opacity: .25; } 50% { opacity: .85; } }
+.aviso { position: fixed; z-index: 30; bottom: 1rem; left: 50%; translate: -50% 0; width: max-content; max-width: calc(100% - 2rem); border-radius: 12px; color: #23132e; background: #f0d4a2; font-size: .85rem; box-shadow: 0 10px 30px #0006; }
+.aviso:not(:empty) { padding: .8rem 1.2rem; }
+dialog { max-width: min(95vw,800px); padding: 1rem; background: #1d122b; border: 1px solid #ebc77866; border-radius: 12px; color: var(--oro-suave); text-align: center; }
+dialog::backdrop { background: #080511e8; backdrop-filter: blur(8px); }
+dialog img { display: block; max-width: 100%; max-height: 75svh; width: auto; height: auto; margin: 1rem auto; border-radius: 4px; }
+#cerrar-visor { float: right; background: none; border: 1px solid #ebc77866; color: var(--oro); border-radius: 50%; width: 40px; height: 40px; cursor: pointer; }
+button:focus-visible,a:focus-visible { outline: 2px solid #ffe1a0; outline-offset: 6px; }
+@media (min-width: 900px) {
+ .altar { display: grid; width: min(1000px,100%); grid-template-columns: 1fr 1fr; column-gap: 5rem; align-items: end; }
+ .dedicatoria { grid-column: 1; grid-row: 1/5; align-self: center; min-height: 19rem; padding: 2.5rem; text-align: left; width: 100%; }
+ .pista { font-size: 2rem; }
+ .texto-dedicatoria { font-size: 1.06rem; }
+ .centro { grid-column: 2; grid-row: 1; margin-top: 0; padding: 0 1rem; gap: 2rem; }
+ .nivel { justify-self: center; }
+ .nivel-1 { grid-column: 2; grid-row: 2; }
+ .nivel-2 { grid-column: 2; grid-row: 3; }
+ .nivel-3 { grid-column: 2; grid-row: 4; }
+ .sello { left: 0; }
+}
+@media (max-width: 650px) {
+ .navegacion { width: calc(100% - 2rem); gap: 1rem; font-size: .65rem; min-height: 64px; }
+ .navegacion button { padding: .5rem .65rem; }
+ .navegacion a:nth-child(2) { display: none; }
+ .ofrenda { padding-top: 2rem; }
+ .ofrenda > .etiqueta { font-size: .55rem; }
+ .sobretitulo { font-size: .6rem; letter-spacing: .14em; }
+ .titulo { font-size: 5.5rem; }
+ .altar { margin-top: 2rem; }
+ .pista { font-size: 1.5rem; }
+ .dedicatoria { min-height: 17rem; }
+ .sello { left: -.2rem; width: 60px; height: 60px; font-size: .5rem; }
+ .galeria { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.2rem .8rem; margin-bottom: 4rem; }
+ .foto-tarjeta span { font-size: .68rem; padding: .7rem .1rem .4rem; }
+ .foto-tarjeta small { font-size: .46rem; }
+ .constelacion { padding: 2.5rem .75rem; border-radius: 100px 100px 12px 12px; }
+ .encabezado-seccion > p:last-child { font-size: .8rem; }
+ .estado-flores { font-size: .8rem; }
+ .ritual { font-size: .53rem; }
+ .camino { letter-spacing: .5rem; }
+}
+@media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } .petalo { display: none; } }

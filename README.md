@@ -1,21 +1,22 @@
-# Ofrenda digital
+# Gotty · Nueve vidas, infinitas huellas
 
-Proyecto base para el challenge de AWS en JSConf México 2026. Personaliza una ofrenda de Día de Muertos, completa la interacción de la vela y publícala con AWS Amplify Hosting.
+Ofrenda digital de Paul para AWS JSConf México 2026, basada en `anacunha/jsconfmx-ofrenda`.
 
-No necesitas instalar nada. Puedes hacer todos los cambios desde el editor de GitHub en el navegador.
+**Sitio público:** https://production.d3afjve66e6jt6.amplifyapp.com/
 
-## Qué vas a cambiar
+## La experiencia
 
-| Paso | Archivo | Qué haces |
-|---|---|---|
-| TODO 1 | `index.html` | Escribe el título de tu ofrenda |
-| TODO 2 | `index.html` | Escribe tu dedicatoria |
-| TODO 3 | `index.html` | Pon una foto de quien recuerdas |
-| TODO 4 | `styles.css` | Elige el color de tu ofrenda |
-| TODO 5 | `script.js` | Completa el código que enciende la vela |
+- Vela interactiva que revela la dedicatoria e ilumina el altar.
+- Cuatro fotografías reales de Gotty en un álbum ampliable con teclado.
+- Ritual de nueve flores: cada flor ilumina una estrella hasta dibujar un gato.
+- Cielo animado, pétalos de cempasúchil y diseño adaptable a celular.
+- Compartir mediante el sistema del dispositivo o copiar el enlace.
+- Respeta la preferencia de movimiento reducido.
 
-Tu dedicatoria puede ser para una persona, una mascota o un personaje. Tu página va a ser pública, así que comparte solo lo que quieras que cualquiera pueda leer.
+El progreso de las flores se guarda únicamente en el navegador del visitante. No es un contador global y no se recopilan datos personales.
 
-## Publicar con AWS Amplify
+## Publicación
 
-Sigue el tutorial del challenge para conectar este repositorio a AWS Amplify Hosting. Cada vez que hagas un cambio en la rama `main`, Amplify publica una nueva versión de tu página.
+HTML, CSS y JavaScript sin dependencias ni compilación. La aplicación `ofrenda-gotty` está en AWS Amplify Hosting, región `us-east-2`, rama `production`.
+
+El despliegue actual es manual: los cambios en GitHub se guardan como fuente, pero para actualizar el sitio hay que subir a Amplify un ZIP con `index.html`, `styles.css`, `script.js` y las cuatro imágenes en la raíz.

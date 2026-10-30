@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Gotty 🐾 · Una luz para una leyenda</title>
     <meta name="description" content="Una luz para Gotty, el gato más chulo. Enciende su vela y descubre una dedicatoria llena de cariño en esta ofrenda de Día de Muertos." />
+    <meta property="og:title" content="Gotty · Nueve vidas, infinitas huellas" />
+    <meta property="og:description" content="Enciende una vela, deja una flor y descubre la constelación de Gotty. Una ofrenda hecha con amor por Paul." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://production.d3afjve66e6jt6.amplifyapp.com/" />
+    <meta property="og:image" content="https://production.d3afjve66e6jt6.amplifyapp.com/gotty-retrato.png" />
+    <meta property="og:image:alt" content="Gotty, gato gris con ojos verdes y pecho blanco" />
+    <meta name="theme-color" content="#110b1d" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2c4 6 8 10 8 17a8 8 0 0 1-16 0c0-7 4-11 8-17z' fill='%23FF9F1C'/%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +19,9 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="cielo" aria-hidden="true"></div>
+    <div class="petalos" aria-hidden="true"></div>
+    <nav class="navegacion" aria-label="Navegación de la ofrenda"><a class="marca" href="#ofrenda">G<span>✦</span></a><a href="#recuerdos">Sus huellitas</a><a href="#constelacion">Su constelación</a><button id="compartir" type="button">Compartir ↗</button></nav>
     <!-- Papel picado: decoración, no necesitas cambiarlo -->
     <svg width="0" height="0" class="sr-only" aria-hidden="true">
       <symbol id="bandera" viewBox="0 0 100 120">
@@ -40,8 +50,9 @@
 
     <main id="ofrenda" class="ofrenda">
       <p class="etiqueta">Día de Muertos · JSConf México 2026</p>
-      <h1 class="titulo">Gotty 🐾</h1>
-      <p class="subtitulo">Una luz para una leyenda de nueve vidas.</p>
+      <p class="sobretitulo">Nueve vidas. Infinitas huellas.</p>
+      <h1 class="titulo">Gotty <span class="titulo-estrella" aria-hidden="true">✦</span></h1>
+      <p class="subtitulo">El gato más chulo de este mundo.<br />Y de todos los que siguen.</p>
 
       <div class="altar">
         <div class="dedicatoria" id="dedicatoria" aria-live="polite">
@@ -56,7 +67,8 @@
         </div>
 
         <div class="centro">
-          <img class="retrato" src="gotty.png" alt="Gotty, gato gris de pelo largo y pecho blanco, descansando delante de un gato blanco" width="899" height="1599" />
+          <img class="retrato" src="gotty-retrato.png" alt="Gotty mirando a cámara, con sus ojos verdes, pelaje gris y pecho blanco" width="899" height="1599" />
+          <span class="sello" aria-hidden="true">SIEMPRE<br />EN CASA</span>
           <div class="vela" aria-hidden="true">
             <span class="llama"></span>
             <span class="cera"></span>
@@ -83,14 +95,40 @@
         </div>
       </div>
 
+      <p class="ritual">01 / Un pequeño ritual para un amor enorme</p>
       <button id="boton-vela" class="boton" type="button" aria-pressed="false" aria-controls="dedicatoria">
         Encender la vela
       </button>
+      <p class="nota-ritual">Una llama. Un recuerdo. Un camino de vuelta.</p>
+      <div class="camino" aria-hidden="true">🐾 <span>✦</span> 🐾 <span>✦</span> 🐾</div>
+
+      <section id="recuerdos" class="recuerdos seccion" aria-labelledby="titulo-recuerdos">
+        <div class="encabezado-seccion"><p class="etiqueta">02 / El álbum de una leyenda</p><h2 id="titulo-recuerdos">Todo chulo.<br /><em>Todo Gotty.</em></h2><p>Hay fotos que no se miran. Se abrazan.<br />Toca una para verla de cerquita.</p></div>
+        <div class="galeria">
+          <button class="foto-tarjeta" type="button" data-foto="gotty-retrato.png" data-pie="La mirada de una leyenda" aria-label="Ver foto: La mirada de una leyenda"><img src="gotty-retrato.png" loading="lazy" alt="Gotty mirando a cámara con sus ojos verdes" width="899" height="1599" /><span><small>01 — LA MIRADA</small>Una facha de otro mundo. ↗</span></button>
+          <button class="foto-tarjeta" type="button" data-foto="gotty.png" data-pie="En la mejor compañía" aria-label="Ver foto: En la mejor compañía"><img src="gotty.png" loading="lazy" alt="Gotty delante de un gato blanco sobre una cobija" width="899" height="1599" /><span><small>02 — EL CARIÑO</small>El amor tiene muchas formas. ↗</span></button>
+          <button class="foto-tarjeta" type="button" data-foto="gotty-compania.png" data-pie="Juntitos, cerca de la puerta" aria-label="Ver foto: Juntitos, cerca de la puerta"><img src="gotty-compania.png" loading="lazy" alt="Gotty y el gato blanco acostados juntos junto a una puerta" width="520" height="1156" /><span><small>03 — LA COMPAÑÍA</small>Juntos se siente más bonito. ↗</span></button>
+          <button class="foto-tarjeta" type="button" data-foto="gotty-descanso.png" data-pie="El arte de estar todo chulo" aria-label="Ver foto: El arte de estar todo chulo"><img src="gotty-descanso.png" loading="lazy" alt="Gotty descansando sobre el sillón con sus patitas blancas extendidas" width="899" height="1599" /><span><small>04 — LA CALMA</small>Patitas blancas. Paz infinita. ↗</span></button>
+        </div>
+      </section>
+
+      <section id="constelacion" class="constelacion seccion" aria-labelledby="titulo-constelacion">
+        <div class="encabezado-seccion"><p class="etiqueta">03 / Donde las huellitas se vuelven estrellas</p><h2 id="titulo-constelacion">Un cielo entero<br /><em>para ti.</em></h2><p>Deja nueve flores para dibujar su constelación.<br />Cada pequeño gesto también es una forma de recordar.</p></div>
+        <div class="mapa-estelar">
+          <svg viewBox="0 0 600 350" role="img" aria-label="Constelación de nueve estrellas con forma de gato" class="gato-estelar"><path class="trazo-gato" d="M100 265 L165 125 L175 50 L260 115 L340 115 L425 50 L435 125 L500 265 L300 310 Z" /><g class="estrellas-gato"></g><path class="cara-gato" d="M225 205l25 6m100-6-25 6m-35 30 10 8 10-8m-10 8v13m-100-22-60-12m60 25-65 5m265-18 60-12m-60 25 65 5" /></svg>
+          <span class="nombre-estelar">G O T T Y · por siempre</span>
+        </div>
+        <div class="acciones-ritual"><button id="flor" class="boton" type="button">✿ Dejar una flor</button><button id="reiniciar" class="boton-secundario" type="button">Volver a dibujar el cielo</button></div>
+        <p id="estado-flores" class="estado-flores" role="status">0 de 9 estrellas encendidas</p><p class="nota-local">Este pequeño ritual se guarda solo en tu navegador.</p>
+      </section>
+      <p class="despedida">No se fue la luz.<br /><em>Se volvió constelación.</em><span>Para Gotty. Con amor, Paul.</span></p>
+      <p id="aviso" class="aviso" role="status"></p>
     </main>
+    <dialog id="visor" aria-labelledby="pie-foto"><button id="cerrar-visor" type="button" aria-label="Cerrar fotografía">✕</button><img id="foto-grande" alt="" /><p id="pie-foto"></p></dialog>
 
     <footer class="pie">
       <span class="recuerdo">El amor también sabe encontrar el camino a casa.</span>
-      Hecha con cariño por Paul · AWS Amplify Hosting · JSConf México 2026
+      Hecha con cariño por Paul <span class="credito-nube">Viviendo entre nubes ☁ AWS Amplify · JSConf México 2026</span>
     </footer>
 
     <script src="script.js"></script>
