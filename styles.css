@@ -1,25 +1,17 @@
-/*
-  TODO 4: Elige el color de tu ofrenda.
-  Cambia el valor de --acento por uno de estos colores o por otro que te guste:
-    Cempasúchil   #FF9F1C
-    Rosa mexicano #FF4FA3
-    Turquesa      #3FD0C2
-    Rojo          #F22727
-    Lila          #B98CFF
-  Ejemplo: --acento: #FF4FA3;
-*/
+/* Paleta de Gotty: noche morada, cempasúchil y oro. */
 :root {
-  --acento: #FF9F1C;
+  --acento: #F9AA45;
+  --oro: #EBC778;
 }
 
 /* A partir de aquí no necesitas cambiar nada, pero puedes explorar */
 :root {
-  --noche: #1E1033;
+  --noche: #160D25;
   --noche-clara: #2C1A4A;
   --cera: #FBEBD3;
   --cempasuchil: #FF9F1C;
-  --rosa: #E4007C;
-  --turquesa: #1FB5A8;
+  --rosa: #813EB0;
+  --turquesa: #EBC778;
   --morado: #7B2FBE;
   --morado-profundo: #3A1B66;
 
@@ -32,6 +24,8 @@
 *::after {
   box-sizing: border-box;
 }
+
+html { overflow-x: hidden; }
 
 body {
   margin: 0;
@@ -486,4 +480,60 @@ body {
     transition-duration: 0.01ms !important;
     transition-delay: 0s !important;
   }
+}
+
+
+/* Una ofrenda para Gotty: el retrato y su recuerdo son el centro. */
+body {
+  background:
+    radial-gradient(ellipse at 12% 28%, #65308b38, transparent 45%),
+    radial-gradient(ellipse at 90% 65%, #c66a1720, transparent 40%),
+    radial-gradient(ellipse at 50% 100%, #47215e, transparent 65%),
+    var(--noche);
+}
+.papel-picado { opacity: .85; }
+.ofrenda { position: relative; isolation: isolate; padding-top: 2rem; }
+.etiqueta {
+  margin: 0 0 1rem; color: var(--oro); font-size: .7rem;
+  font-weight: 600; letter-spacing: .24em; text-transform: uppercase;
+}
+.titulo { font-size: clamp(3.5rem, 10vw, 6.5rem); text-shadow: 0 3px 0 #753b27, 0 0 45px #e6a33f22; }
+.subtitulo { margin: .9rem 0 0; color: #d5bfdc; font-size: clamp(.95rem, 2.5vw, 1.1rem); }
+.altar { margin-top: 1.75rem; }
+.dedicatoria {
+  min-height: 13rem; border: 1px solid #ebc77838; border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff05, #ffffff00);
+}
+.pista { color: #f0dcbf; font-style: normal; font-size: 1.1rem; }
+.pista span { display: block; margin-top: .75rem; color: #c2a9cb; font-size: .9rem; }
+.texto-dedicatoria { max-width: 42ch; font-size: 1rem; line-height: 1.75; }
+.texto-dedicatoria strong { display: block; margin-bottom: .6rem; color: var(--oro); font-size: 1.12rem; }
+.firma { display: block; margin-top: .6rem; color: var(--oro); font-size: .85rem; }
+.centro { margin-top: 2rem; gap: clamp(1.5rem, 5vw, 3rem); padding: 0 1.5rem; }
+.retrato {
+  width: clamp(170px, 38vw, 230px); aspect-ratio: 3 / 4; height: auto;
+  object-position: 50% 70%; border: 7px solid #b58639;
+  outline: 1px solid var(--oro); outline-offset: 5px;
+  border-radius: 70px 70px 8px 8px; rotate: -2deg;
+  box-shadow: 0 0 0 3px #51321f, 0 16px 50px #0008;
+  filter: brightness(.78) saturate(.8);
+}
+.vela { width: 36px; height: 108px; flex-shrink: 0; }
+.nivel { height: clamp(42px, 7vw, 52px); border-top: 1px solid #ffe6ad66; }
+.nivel-1 { width: 62%; --tela: #c47a26; }
+.nivel-2 { width: 80%; --tela: #783f9e; }
+.nivel-3 { width: 98%; --tela: #432357; }
+.boton { box-shadow: 0 6px 28px #e8902925; padding: 1.05em 2em; }
+.boton:hover { box-shadow: 0 8px 35px #e8902945; }
+.encendida .dedicatoria { border-color: #ebc778aa; background: #ffb6420a; }
+.encendida .retrato { box-shadow: 0 0 0 3px #51321f, 0 0 55px #ffb44c33; }
+.pie { color: #bda6c8; font-size: .7rem; }
+.recuerdo { display: block; margin-bottom: .6rem; color: var(--oro); font-size: .9rem; font-style: italic; }
+@media (max-width: 480px) {
+  .ofrenda { padding-inline: 1rem; }
+  .etiqueta { letter-spacing: .12em; font-size: .62rem; }
+  .dedicatoria { min-height: 17rem; padding: 1rem; }
+  .centro { padding-inline: .75rem; gap: 1.5rem; }
+  .texto-dedicatoria { font-size: .94rem; }
+  .texto-dedicatoria strong { font-size: 1rem; }
 }

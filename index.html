@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mi ofrenda digital</title>
-    <meta name="description" content="Una ofrenda digital de Día de Muertos publicada con AWS Amplify Hosting." />
+    <title>Gotty 🐾 · Una luz para una leyenda</title>
+    <meta name="description" content="Una luz para Gotty, el gato más chulo. Enciende su vela y descubre una dedicatoria llena de cariño en esta ofrenda de Día de Muertos." />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2c4 6 8 10 8 17a8 8 0 0 1-16 0c0-7 4-11 8-17z' fill='%23FF9F1C'/%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,35 +39,24 @@
     </div>
 
     <main id="ofrenda" class="ofrenda">
-      <!--
-        TODO 1: ¿Para quién es tu ofrenda? Escribe su nombre, un apodo o el tema de tu ofrenda.
-        Ejemplo: <h1 class="titulo">Para mi abuela Lupita</h1>
-      -->
-      <h1 class="titulo">Escribe el título de tu ofrenda</h1>
+      <p class="etiqueta">Día de Muertos · JSConf México 2026</p>
+      <h1 class="titulo">Gotty 🐾</h1>
+      <p class="subtitulo">Una luz para una leyenda de nueve vidas.</p>
 
       <div class="altar">
-        <div class="dedicatoria" id="dedicatoria">
-          <p class="pista">Enciende la vela para leer la dedicatoria.</p>
-          <!--
-            TODO 2: Escribe unas palabras para quien recuerdas: una persona, una mascota
-            o un personaje. Tu página va a ser pública,
-            así que comparte solo lo que quieras que cualquiera pueda leer.
-            Ejemplo: Por sus tamales de los domingos y por enseñarme a bailar cumbia en la cocina.
-          -->
+        <div class="dedicatoria" id="dedicatoria" aria-live="polite">
+          <p class="pista">Hay huellitas que se quedan para siempre.<br /><span>Enciende la vela y deja que brille su recuerdo.</span></p>
           <p class="texto-dedicatoria">
-            Escribe aquí tu dedicatoria: a quién recuerdas y por qué.
+            <strong>Para el gato cachondo top 1 en el mundo.</strong>
+            Gotty, tu pelito gris, tu pechito blanco y toda esa facha
+            dejaron huellitas para siempre en mi corazón.
+            Mi gato chulo, aquí siempre tendrás una luz encendida.
+            <span class="firma">Con todo mi cariño, Paul 🧡</span>
           </p>
         </div>
 
         <div class="centro">
-          <!--
-            TODO 3: Pon una foto de quien recuerdas.
-            Arrastra tu foto (JPG o PNG) a la lista de archivos del editor.
-            Luego cambia "foto-ejemplo.svg" por el nombre de tu foto y describe en alt qué se ve.
-            Tu página va a ser pública, así que usa una foto que quieras compartir.
-            Ejemplo: <img class="retrato" src="abuela-lupita.jpg" alt="Mi abuela Lupita en su cocina" />
-          -->
-          <img class="retrato" src="foto-ejemplo.svg" alt="Espacio para la foto de la ofrenda" />
+          <img class="retrato" src="gotty.png" alt="Gotty, gato gris de pelo largo y pecho blanco, descansando delante de un gato blanco" width="899" height="1599" />
           <div class="vela" aria-hidden="true">
             <span class="llama"></span>
             <span class="cera"></span>
@@ -100,7 +89,8 @@
     </main>
 
     <footer class="pie">
-      Publicada con AWS Amplify Hosting para JSConf México 2026
+      <span class="recuerdo">El amor también sabe encontrar el camino a casa.</span>
+      Hecha con cariño por Paul · AWS Amplify Hosting · JSConf México 2026
     </footer>
 
     <script src="script.js"></script>
